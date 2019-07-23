@@ -1,0 +1,1 @@
+LCD monitor for controling the NETIO smart socket
