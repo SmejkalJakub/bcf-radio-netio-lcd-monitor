@@ -67,4 +67,6 @@ int menu2_init(Menu *menu);
 int menu2_event(Menu *menu, uint8_t keyPress);
 int menu2_draw(Menu *menu);
 
+void rename_item(MenuItem *item, char *name);
+
 #endif

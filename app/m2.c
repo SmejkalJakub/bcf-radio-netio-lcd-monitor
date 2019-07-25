@@ -197,3 +197,10 @@ int menu2_draw(Menu *menu)
 
 	return -1;
 }
+
+void rename_item(MenuItem *item, char *name)
+{
+    //item->text[0] = name;
+    strncpy(item->text, name, sizeof(item->text[0]));
+}
+

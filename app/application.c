@@ -152,8 +152,6 @@ void menu_device_callback(Menu *menu, MenuItem *item)
         }
         bc_scheduler_plan_relative(updateTask, 1025);
     }
-
-
 }
 
 int app_state = 0;
@@ -172,27 +170,25 @@ void lcdBufferNumber(int number, int x, int y)
     bc_module_lcd_draw_string(x, y, str, 1);
 }
 
-void button_event_handler(bc_button_t *self, bc_button_event_t event, void *event_param)
+void lcd_event_handler(bc_module_lcd_event_t event, void *event_param)
 {
-    (void) self;
-
     bc_scheduler_plan_now(0);
 
     if (app_state == 0)
     {
-        if (self == &button_left && event == BC_BUTTON_EVENT_CLICK)
+        if (event == BC_MODULE_LCD_EVENT_LEFT_CLICK)
         {
             menu2_event(&menu_main, BTN_UP);
         }
-        if (self == &button_left && event == BC_BUTTON_EVENT_HOLD)
+        if (event == BC_MODULE_LCD_EVENT_LEFT_HOLD)
         {
             menu2_event(&menu_main, BTN_LEFT);
         }
-        else if (self == &button_right && event == BC_BUTTON_EVENT_CLICK)
+        else if (event == BC_MODULE_LCD_EVENT_RIGHT_CLICK)
         {
             menu2_event(&menu_main, BTN_DOWN);
         }
-        else if (self == &button_right && event == BC_BUTTON_EVENT_HOLD)
+        else if (event == BC_MODULE_LCD_EVENT_RIGHT_HOLD)
         {
             menu2_event(&menu_main, BTN_ENTER);
         }
@@ -243,12 +239,7 @@ void application_init(void)
     bc_led_init(&led, BC_GPIO_LED, false, false);
     bc_led_blink(&led, 3);
 
-    const bc_button_driver_t* lcdButtonDriver =  bc_module_lcd_get_button_driver();
-    bc_button_init_virtual(&button_left, 0, lcdButtonDriver, 0);
-    bc_button_init_virtual(&button_right, 1, lcdButtonDriver, 0);
-
-    bc_button_set_event_handler(&button_left, button_event_handler, (int*)0);
-    bc_button_set_event_handler(&button_right, button_event_handler, (int*)1);
+    bc_module_lcd_set_event_handler(lcd_event_handler, NULL);
 
     bc_button_set_hold_time(&button_left, 300);
     bc_button_set_hold_time(&button_right, 300);
@@ -263,7 +254,6 @@ void application_init(void)
     bc_radio_pairing_request("netio-lcd-monitor", VERSION);
 
     updateTask = bc_scheduler_register(update_task, NULL, 1000);
-
 
     menu2_init(&menu_main);
     menu2_init(&menu_device_1);
