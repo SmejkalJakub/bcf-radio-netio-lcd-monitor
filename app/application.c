@@ -229,7 +229,7 @@ void application_init(void)
 
     // Initialize battery
     bc_module_battery_init();
-    bc_module_battery_set_event_handler(battery_event_handler, NULL);
+    bc_module_battery_set_event_handler(battery_event_handler, NULL);d
     bc_module_battery_set_update_interval(5 * 60 * 1000);
 
     // Initialize logging
