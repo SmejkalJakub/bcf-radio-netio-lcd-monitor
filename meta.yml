@@ -1,0 +1,9 @@
+article: https://www.hackster.io/jakub-smejkal/bigclown-lcd-monitor-of-netio-sockets-b5b1fa
+video: https://www.youtube.com/watch?v=5fihG2xp4y8
+images:
+  - title:
+    url: https://www.bigclown.com/kits/lcd-thermostat/main.png
+assembly:
+  - name: BigClown LCD Module
+  - name: BigClown Core Module
+  - name: BigClown Mini Battery Module
