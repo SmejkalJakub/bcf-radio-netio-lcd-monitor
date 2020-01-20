@@ -1,14 +1,14 @@
-article: https://www.hackster.io/jakub-smejkal/bigclown-lcd-monitor-of-netio-sockets-b5b1fa
+article: https://www.hackster.io/jakub-smejkal/hardwario-iot-kit-lcd-monitor-of-netio-sockets-b5b1fa
 video: https://www.youtube.com/watch?v=5fihG2xp4y8
 articles:
   - title: BigClown LCD monitor of NETIO sockets
-    url: https://www.hackster.io/jakub-smejkal/bigclown-lcd-monitor-of-netio-sockets-b5b1fa
+    url: https://www.hackster.io/jakub-smejkal/hardwario-iot-kit-lcd-monitor-of-netio-sockets-b5b1fa
     description: You can control and monitor up to 3 devices connected to the NETIO smart socket with just BigClown LCD Kit.
     images:
-      - url: https://hackster.imgix.net/uploads/attachments/947891/_TwzYZt8F8s.uploads%252Ftmp%252F968c8687-a358-4401-a633-4fdab7e1fa93%252Fblob?auto=compress%2Cformat&w=900&h=675&fit=min
+      - url: https://hackster.imgix.net/uploads/attachments/1050344/_GIEKcC4VbB.blob?auto=compress%2Cformat&w=900&h=675&fit=min
 images:
   - title:
-    url: https://www.bigclown.com/kits/lcd-thermostat/main.png
+    url: https://cdn.myshoptet.com/usr/shop.hardwario.com/user/shop/category_portrait/174-1_project-thermostat-lcd-a-4.jpg?5de56e1c
 assembly:
   - name: BigClown LCD Module
   - name: BigClown Core Module
