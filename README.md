@@ -1,6 +1,6 @@
 <a href="https://www.hardwario.com/"><img src="https://www.hardwario.com/ci/assets/hw-logo.svg" width="200" alt="HARDWARIO Logo" align="right"></a>
 
-[![Travis](https://img.shields.io/travis/bigclownprojects/bcf-radio-netio-lcd-monitor/master.svg)](https://travis-ci.org/bigclownprojects/bcf-radio-netio-lcd-monitor)
+[![Travis](https://www.travis-ci.com/hardwario/twr-radio-netio-lcd-monitor.svg?branch=master)](https://www.travis-ci.com/hardwario/twr-radio-netio-lcd-monitor)
 [![Release](https://img.shields.io/github/release/bigclownprojects/bcf-radio-netio-lcd-monitor.svg)](https://github.com/bigclownprojects/bcf-radio-netio-lcd-monitor/releases)
 [![License](https://img.shields.io/github/license/bigclownprojects/bcf-radio-netio-lcd-monitor.svg)](https://github.com/bigclownprojects/bcf-radio-netio-lcd-monitor/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/hardwario_en.svg?style=social&label=Follow)](https://twitter.com/hardwario_en)
@@ -11,7 +11,7 @@ If you want to get more information about Core Module, firmware and how to work 
 
 **https://developers.hardwario.com/firmware/basic-overview/**
 
-User's application code (business logic) goes into `app/application.c`.
+User's application code (business logic) goes into `src/application.c`.
 
 ## License
 
